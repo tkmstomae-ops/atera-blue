@@ -1,10 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
   <defs>
-    <linearGradient id="gradient4" x1="0%" y1="50%" x2="100%" y2="50%">
-      <stop offset="0%" stop-color="#2f7383"/>
-      <stop offset="100%" stop-color="#8abed0"/>
+    <linearGradient id="sky4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#bcd0ff" />
+      <stop offset="100%" stop-color="#304a72" />
+    </linearGradient>
+    <linearGradient id="mountain4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4c6d7a" />
+      <stop offset="100%" stop-color="#223a47" />
+    </linearGradient>
+    <linearGradient id="river4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#71efff" />
+      <stop offset="100%" stop-color="#2178bb" />
     </linearGradient>
   </defs>
-  <rect width="800" height="450" fill="url(#gradient4)"/>
-  <path d="M0,310 C160,260 300,360 440,330 C580,300 680,370 800,340 L800,450 L0,450 Z" fill="rgba(244,244,244,0.22)"/>
+  <rect width="800" height="450" fill="url(#sky4)" />
+  <path d="M0,240 L140,160 L280,260 L400,180 L540,260 L680,190 L800,260 L800,450 L0,450 Z" fill="url(#mountain4)" />
+  <path d="M0,450 C200,380 320,330 460,350 C600,370 660,310 800,330 L800,450 Z" fill="url(#river4)" />
+  <path d="M160,260 C220,250 300,280 360,270 C420,260 520,270 580,260" stroke="#ffffff" stroke-width="4" opacity="0.2" fill="none" />
+  <circle cx="620" cy="110" r="36" fill="#ffe7a3" opacity="0.7" />
 </svg>

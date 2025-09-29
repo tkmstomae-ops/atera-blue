@@ -1,10 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
   <defs>
-    <linearGradient id="gradient5" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#69a9b9"/>
-      <stop offset="100%" stop-color="#285d68"/>
+    <linearGradient id="sky5" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f6f0ff" />
+      <stop offset="100%" stop-color="#546d8b" />
+    </linearGradient>
+    <linearGradient id="mountain5a" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#657c6f" />
+      <stop offset="100%" stop-color="#314137" />
+    </linearGradient>
+    <linearGradient id="mountain5b" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#92a99a" />
+      <stop offset="100%" stop-color="#4e6a54" />
+    </linearGradient>
+    <linearGradient id="river5" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#52d5ff" />
+      <stop offset="100%" stop-color="#276db5" />
     </linearGradient>
   </defs>
-  <rect width="800" height="450" fill="url(#gradient5)"/>
-  <path d="M0,280 C200,240 300,360 500,320 C640,290 720,360 800,330 L800,450 L0,450 Z" fill="rgba(244,244,244,0.2)"/>
+  <rect width="800" height="450" fill="url(#sky5)" />
+  <path d="M0,310 L120,220 L220,300 L330,210 L470,300 L620,220 L800,320 L800,450 L0,450 Z" fill="url(#mountain5a)" />
+  <path d="M0,280 L90,210 L200,250 L300,200 L440,260 L560,210 L700,260 L800,210 L800,450 L0,450 Z" fill="url(#mountain5b)" opacity="0.8" />
+  <path d="M0,450 C160,380 260,340 390,350 C540,360 640,320 800,330 L800,450 Z" fill="url(#river5)" />
+  <path d="M200,330 C260,320 340,330 420,320 C520,310 580,330 660,320" stroke="#ffffff" stroke-width="3" opacity="0.25" fill="none" />
 </svg>

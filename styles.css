@@ -177,20 +177,25 @@ img {
 }
 
 .btn-enter {
-  display: inline-block;
-  padding: var(--space-1) var(--space-3);
-  background-color: var(--c-accent);
-  color: var(--c-light);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-1) var(--space-4);
+  border: 2px solid var(--c-light);
   border-radius: var(--radius-md);
+  background-color: transparent;
+  color: var(--c-light);
   font-weight: 600;
   letter-spacing: 0.08em;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-transform: uppercase;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-enter:hover,
 .btn-enter:focus-visible {
   transform: translateY(-4px);
-  background-color: rgba(90, 141, 155, 0.8);
+  background-color: var(--c-light);
+  color: var(--c-base);
 }
 
 section {

@@ -1,10 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
   <defs>
-    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#5ea3b2"/>
-      <stop offset="100%" stop-color="#2f6d7c"/>
+    <linearGradient id="sky2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0f6ff" />
+      <stop offset="100%" stop-color="#6ba0c0" />
+    </linearGradient>
+    <linearGradient id="mountain2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5d7f9c" />
+      <stop offset="100%" stop-color="#33424f" />
+    </linearGradient>
+    <linearGradient id="river2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#66d6ff" />
+      <stop offset="100%" stop-color="#2070b6" />
     </linearGradient>
   </defs>
-  <rect width="800" height="450" fill="url(#gradient2)"/>
-  <path d="M0,280 C180,240 280,360 400,320 C520,280 640,380 800,340 L800,450 L0,450 Z" fill="rgba(244,244,244,0.25)"/>
+  <rect width="800" height="450" fill="url(#sky2)" />
+  <path d="M0,260 L160,180 L260,240 L380,140 L520,220 L640,160 L800,260 L800,450 L0,450 Z" fill="url(#mountain2)" />
+  <path d="M0,450 C140,380 260,360 360,370 C480,380 620,330 800,360 L800,450 Z" fill="url(#river2)" />
+  <path d="M160,320 C240,290 300,280 380,290 C460,300 520,280 600,300" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.3" fill="none" />
 </svg>

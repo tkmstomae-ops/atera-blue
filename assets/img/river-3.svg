@@ -1,10 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
   <defs>
-    <linearGradient id="gradient3" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#3a7b8b"/>
-      <stop offset="100%" stop-color="#75b0c1"/>
+    <linearGradient id="sky3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffd7b5" />
+      <stop offset="100%" stop-color="#4a6b8c" />
+    </linearGradient>
+    <linearGradient id="mountain3a" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6d8b89" />
+      <stop offset="100%" stop-color="#3f5f5d" />
+    </linearGradient>
+    <linearGradient id="mountain3b" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#93b0a6" />
+      <stop offset="100%" stop-color="#4c6e66" />
+    </linearGradient>
+    <linearGradient id="river3" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3ad0ff" />
+      <stop offset="100%" stop-color="#0d4e96" />
     </linearGradient>
   </defs>
-  <rect width="800" height="450" fill="url(#gradient3)"/>
-  <path d="M0,300 C220,260 320,360 480,340 C620,320 700,380 800,360 L800,450 L0,450 Z" fill="rgba(244,244,244,0.18)"/>
+  <rect width="800" height="450" fill="url(#sky3)" />
+  <path d="M0,310 L120,240 L240,300 L360,220 L520,320 L660,260 L800,320 L800,450 L0,450 Z" fill="url(#mountain3a)" />
+  <path d="M0,280 L80,220 L180,250 L280,200 L420,260 L560,210 L720,260 L800,220 L800,450 L0,450 Z" fill="url(#mountain3b)" opacity="0.8" />
+  <path d="M0,450 C180,390 260,340 420,360 C560,380 660,320 800,340 L800,450 Z" fill="url(#river3)" />
+  <path d="M120,330 C220,320 320,340 420,330 C540,320 580,300 700,310" stroke="#ffffff" stroke-width="3" opacity="0.25" fill="none" />
 </svg>

@@ -353,8 +353,8 @@ section h2::after {
 
 .contact-form input,
 .contact-form textarea {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(244, 244, 244, 0.16);
+  background: rgba(56, 98, 104, 0.8);
+  border: 1px solid rgba(244, 244, 244, 0.3);
   border-radius: var(--radius-sm);
   padding: var(--space-2);
   color: var(--c-light);

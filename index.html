@@ -2,22 +2,44 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ATERA BLUE</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>ATERA BLUE | 阿寺渓谷のいまがわかるポータル</title>
+    <meta
+      name="description"
+      content="阿寺渓谷の最新写真・天気・アクセス情報をお届けするATERA BLUEの公式サイト。訪問前に最新の風景や注意喚起をチェック。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="container header-inner" aria-label="サイトヘッダー">
+    <header class="site-header" aria-label="サイトヘッダー">
+      <div class="container header-inner">
         <a class="logo" href="#hero" aria-label="ATERA BLUE ホーム">
-          <img src="assets/logo/logo.svg" alt="Atera Blue ロゴ" />
+          <img src="assets/logo/logo.svg" alt="ATERA BLUE ロゴ" />
         </a>
-        <nav class="site-nav" aria-label="メインメニュー">
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="global-nav"
+        >
+          <span class="sr-only">メニューを開閉</span>
+          <span aria-hidden="true"></span>
+        </button>
+        <nav id="global-nav" class="site-nav" aria-label="グローバルナビゲーション">
           <ul>
-            <li><a href="#news">最新情報</a></li>
-            <li><a href="#blog">ブログ</a></li>
-            <li><a href="#products">商品</a></li>
-            <li><a href="#contact">お問い合わせ</a></li>
+            <li><a href="#news">NEWS</a></li>
+            <li><a href="#access">ACCESS</a></li>
+            <li><a href="#store">STORE</a></li>
+            <li><a href="#about">ABOUT</a></li>
           </ul>
         </nav>
       </div>
@@ -26,135 +48,182 @@
     <main>
       <section id="hero" class="hero" aria-labelledby="hero-title">
         <div class="hero-media" aria-hidden="true">
-          <iframe
-            src="https://www.youtube.com/embed/rc-kmH9bn9I?autoplay=1&mute=1&controls=0&loop=1&playlist=rc-kmH9bn9I&playsinline=1&modestbranding=1&rel=0"
-            title="ATERA BLUE ヒーロー動画"
-            allow="autoplay; encrypted-media"
-            frameborder="0"
-          ></iframe>
-          <div class="hero-fade" aria-hidden="true"></div>
+          <img
+            src="assets/img/river-1.svg"
+            alt="阿寺渓谷の清流"
+            loading="eager"
+          />
         </div>
-        <div class="hero-content">
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="container hero-content">
+          <p class="hero-eyebrow">NAGANO | JAPAN</p>
           <h1 id="hero-title">ATERA BLUE</h1>
-          <a class="btn-enter" href="#news">ENTER</a>
+          <p class="hero-lede">
+            透明な青に出会う旅の前に、阿寺渓谷の「いま」をチェック。
+            最新の写真・天気・アクセス情報をお届けします。
+          </p>
+          <a class="btn-primary" href="#news">最新情報を見る</a>
         </div>
       </section>
 
       <section id="news" class="news" aria-labelledby="news-title">
-        <div class="container">
-          <h2 id="news-title">最新情報</h2>
-          <div class="news-slider" role="region" aria-label="最新情報スライダー">
-            <div class="slider-track">
-              <figure class="slide is-active">
-                <img src="assets/img/river-1.svg" alt="川の風景 1" />
-              </figure>
-              <figure class="slide">
-                <img src="assets/img/river-2.svg" alt="川の風景 2" />
-              </figure>
-              <figure class="slide">
-                <img src="assets/img/river-3.svg" alt="川の風景 3" />
-              </figure>
-              <figure class="slide">
-                <img src="assets/img/river-4.svg" alt="川の風景 4" />
-              </figure>
-              <figure class="slide">
-                <img src="assets/img/river-5.svg" alt="川の風景 5" />
-              </figure>
+        <div class="container stack">
+          <div class="section-heading">
+            <p class="eyebrow">NEWS</p>
+            <h2 id="news-title">最新の阿寺渓谷</h2>
+            <p class="section-lede">
+              Notionから投稿された最新の写真とお知らせを掲載します。訪問前のコンディションチェックにご活用ください。
+            </p>
+          </div>
+
+          <aside
+            class="notice-board"
+            aria-labelledby="notice-title"
+            data-alert-source=""
+          >
+            <div class="notice-header">
+              <p id="notice-title" class="eyebrow">NOTICE</p>
+              <h3>注意喚起・通行情報</h3>
+            </div>
+            <ul class="notice-list" role="list"></ul>
+          </aside>
+
+          <div
+            class="news-grid"
+            role="list"
+            data-notion-source=""
+            data-notion-limit="6"
+          ></div>
+
+          <div class="news-note">
+            <p>
+              Notionデータベースの公開URLを設定すると、投稿が自動でここに反映されます。設定方法はリポジトリのREADMEをご参照ください。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="access" class="access" aria-labelledby="access-title">
+        <div class="container stack">
+          <div class="section-heading">
+            <p class="eyebrow">ACCESS</p>
+            <h2 id="access-title">阿寺渓谷へのアクセス</h2>
+            <p class="section-lede">
+              長野県木曽郡大桑村 阿寺渓谷入口（阿寺渓谷キャンプ場周辺）
+            </p>
+          </div>
+
+          <div class="access-layout">
+            <div class="map-card" aria-label="阿寺渓谷の地図">
+              <iframe
+                title="Google Map 阿寺渓谷入口"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3245.387228886205!2d137.55463997632854!3d35.74609782540901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6002d3775cb88919%3A0x1a2c6f4001a3bca9!2z5biC5bed6YOh5rWc44K544Ob44K_44O8!5e0!3m2!1sja!2sjp!4v1716393600000!5m2!1sja!2sjp"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <div class="access-info">
+              <div class="travel-card">
+                <h3>車でお越しの方</h3>
+                <ul>
+                  <li>中央自動車道 中津川ICより国道19号経由 約60分</li>
+                  <li>中央自動車道 伊那ICより国道19号経由 約90分</li>
+                  <li>駐車場あり（混雑時は臨時駐車場をご案内）</li>
+                </ul>
+              </div>
+              <div class="travel-card">
+                <h3>電車でお越しの方</h3>
+                <ul>
+                  <li>JR中央本線 南木曽駅よりタクシーで約25分</li>
+                  <li>JR中央本線 倉本駅より徒歩＋シャトルバスで約60分</li>
+                  <li>夏季は村営シャトルバスの運行予定あり</li>
+                </ul>
+              </div>
             </div>
           </div>
+
+          <section
+            class="weather"
+            aria-labelledby="weather-title"
+            data-latitude="35.7500"
+            data-longitude="137.5667"
+          >
+            <div class="weather-header">
+              <p class="eyebrow">WEATHER</p>
+              <h3 id="weather-title">阿寺渓谷の天気（直近）</h3>
+              <p class="weather-updated" aria-live="polite"></p>
+            </div>
+            <div class="weather-content">
+              <div class="weather-current" role="group" aria-label="現在の天気"></div>
+              <div class="weather-forecast" role="list"></div>
+            </div>
+          </section>
         </div>
       </section>
 
-      <section id="blog" class="blog" aria-labelledby="blog-title">
-        <div class="container">
-          <h2 id="blog-title">ブログ</h2>
-          <div class="blog-grid">
-            <article class="blog-card">
-              <a href="https://note.com/yoshino_tomae/n/nf84ec453deb7" target="_blank" rel="noopener noreferrer">
-                <div class="badge" aria-label="新着">NEW!</div>
-                <img src="assets/img/river-1.svg" alt="ブログ記事1のサムネイル" />
-                <div class="blog-card-body">
-                  <time datetime="2024-05-12">2024.05.12</time>
-                  <h3>季節の水辺と青の記憶</h3>
-                </div>
-              </a>
-            </article>
-            <article class="blog-card">
-              <a href="https://note.com/yoshino_tomae/n/n322582f0f733" target="_blank" rel="noopener noreferrer">
-                <img src="assets/img/river-2.svg" alt="ブログ記事2のサムネイル" />
-                <div class="blog-card-body">
-                  <time datetime="2024-04-04">2024.04.04</time>
-                  <h3>青が灯す日々のルーティン</h3>
-                </div>
-              </a>
-            </article>
-            <article class="blog-card">
-              <a href="https://note.com/yoshino_tomae/n/ne8b98fbd5530" target="_blank" rel="noopener noreferrer">
-                <img src="assets/img/river-3.svg" alt="ブログ記事3のサムネイル" />
-                <div class="blog-card-body">
-                  <time datetime="2024-03-18">2024.03.18</time>
-                  <h3>春を待つ青、川辺の散歩</h3>
-                </div>
-              </a>
-            </article>
+      <section id="store" class="store" aria-labelledby="store-title">
+        <div class="container stack center">
+          <p class="eyebrow">STORE</p>
+          <h2 id="store-title">ATERA BLUE STORE</h2>
+          <p class="section-lede">
+            渓谷の魅力をお届けするオンラインストアを準備中です。
+          </p>
+          <div class="coming-soon">Coming Soon</div>
+        </div>
+      </section>
+
+      <section id="about" class="about" aria-labelledby="about-title">
+        <div class="container stack">
+          <div class="section-heading">
+            <p class="eyebrow">ABOUT</p>
+            <h2 id="about-title">ATERA BLUEとは</h2>
           </div>
-        </div>
-      </section>
-
-      <section id="products" class="products" aria-labelledby="products-title">
-        <div class="container">
-          <h2 id="products-title">商品</h2>
-          <div class="product-grid">
-            <a href="#" class="product-card" aria-label="商品 1">
-              <img src="assets/img/vegetable-1.svg" alt="野菜の商品画像 1" />
-            </a>
-            <a href="#" class="product-card" aria-label="商品 2">
-              <img src="assets/img/vegetable-2.svg" alt="野菜の商品画像 2" />
-            </a>
-            <a href="#" class="product-card" aria-label="商品 3">
-              <img src="assets/img/vegetable-3.svg" alt="野菜の商品画像 3" />
-            </a>
-            <a href="#" class="product-card" aria-label="商品 4">
-              <img src="assets/img/vegetable-4.svg" alt="野菜の商品画像 4" />
-            </a>
-            <a href="#" class="product-card" aria-label="商品 5">
-              <img src="assets/img/vegetable-5.svg" alt="野菜の商品画像 5" />
-            </a>
-            <a href="#" class="product-card" aria-label="商品 6">
-              <img src="assets/img/vegetable-6.svg" alt="野菜の商品画像 6" />
-            </a>
-            <a href="#" class="product-card" aria-label="商品 7">
-              <img src="assets/img/vegetable-7.svg" alt="野菜の商品画像 7" />
-            </a>
-            <a href="#" class="product-card" aria-label="商品 8">
-              <img src="assets/img/vegetable-8.svg" alt="野菜の商品画像 8" />
-            </a>
+          <div class="about-content">
+            <p>
+              ATERA BLUEは、阿寺渓谷の自然美とその瞬間を届ける地域プロジェクトです。
+              四季折々の表情を写真と文章で記録し、訪れる人が安心して旅を計画できる情報を提供します。
+            </p>
+            <dl>
+              <div>
+                <dt>運営</dt>
+                <dd>合同会社ATERA BLUE</dd>
+              </div>
+              <div>
+                <dt>所在地</dt>
+                <dd>長野県木曽郡大桑村 阿寺渓谷エリア</dd>
+              </div>
+              <div>
+                <dt>事業内容</dt>
+                <dd>観光情報発信、撮影ガイド、地域産品の企画販売</dd>
+              </div>
+              <div>
+                <dt>お問い合わせ</dt>
+                <dd><a href="mailto:info@atera-blue.jp">info@atera-blue.jp</a></dd>
+              </div>
+            </dl>
           </div>
-        </div>
-      </section>
-
-      <section id="contact" class="contact" aria-labelledby="contact-title">
-        <div class="container">
-          <h2 id="contact-title">お問い合わせ</h2>
-          <form class="contact-form" novalidate>
-            <label for="name">お名前</label>
-            <input id="name" name="name" type="text" required />
-
-            <label for="email">メールアドレス</label>
-            <input id="email" name="email" type="email" required />
-
-            <label for="message">お問い合わせ内容</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-
-            <button type="submit">送信</button>
-          </form>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container">
-        <p>&copy; <span id="year"></span> ATERA BLUE</p>
+    <footer class="site-footer" aria-label="フッター">
+      <div class="container footer-inner">
+        <div>
+          <a class="logo" href="#hero" aria-label="ATERA BLUE ホームへ戻る">
+            <img src="assets/logo/logo.svg" alt="ATERA BLUE ロゴ" />
+          </a>
+          <p class="footer-copy">
+            &copy; <span id="year"></span> ATERA BLUE. All rights reserved.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="#news">最新情報</a>
+          <a href="#access">アクセス</a>
+          <a href="#store">ストア</a>
+          <a href="#about">会社概要</a>
+        </div>
       </div>
     </footer>
 
